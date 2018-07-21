@@ -63,6 +63,10 @@ allow platform_app preloads_data_file:dir r_dir_perms;
 allow platform_app preloads_media_file:file r_file_perms;
 allow platform_app preloads_media_file:dir r_dir_perms;
 
+# Fixes Nethunter terminal not opening
+allow platform_app device:dir read;
+allow platform_app devpts:chr_file open;
+
 read_runtime_log_tags(platform_app)
 
 ###
